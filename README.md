@@ -9,5 +9,6 @@ Contains next error types:
 with mapping from PostgreSQL errors, and to HTTP and gRPC.
 
 ## TODO
+* Add PermissionDenied error.
 * Add HTTP middleware.
 * Add interceptor for wrapping errors into ToGRPCError().
