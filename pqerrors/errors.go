@@ -6,12 +6,13 @@ import (
 	"errors"
 
 	"github.com/lib/pq"
+
 	"github.com/vtopc/verrors"
 )
 
 const notFoundErrCode = "23505"
 
-// handleError maps sql/postgresql errors into the verrors
+// HandleError maps sql/postgresql errors into the verrors
 // and logs service(non-user) errors
 func HandleError(_ context.Context, err error, id ...string) error {
 	cErr := verrors.Err{}

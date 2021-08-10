@@ -55,15 +55,15 @@ func TestToGRPCError(t *testing.T) {
 			wantStatusCode: codes.OK,
 		},
 		"InvalidArgument": {
-			err:            InvalidArgument{},
+			err:            NewInvalidArgument(nil),
 			wantStatusCode: codes.InvalidArgument,
 		},
 		"NotFound": {
-			err:            NotFound{},
+			err:            NewNotFound(nil, "some_id"),
 			wantStatusCode: codes.NotFound,
 		},
 		"AlreadyExists": {
-			err:            AlreadyExists{},
+			err:            NewAlreadyExists(nil),
 			wantStatusCode: codes.AlreadyExists,
 		},
 		"Internal": {
