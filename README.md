@@ -1,4 +1,5 @@
 # verrors
 
 ## TODO
-* Add interceptor for wrapping errors into ToGRPCError()
+* Add HTTP middleware.
+* Add interceptor for wrapping errors into ToGRPCError().
