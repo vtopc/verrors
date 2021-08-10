@@ -4,7 +4,7 @@ deps:
 
 .PHONY: test
 test:
-	go test `go list ./... | grep -v '/gen' | grep -v '/protos'` -cover -count=1 -coverprofile=coverage.txt -covermode=count
+	go test `go list ./... | grep -v '/gen'` -cover -count=1 -coverprofile=coverage.txt -covermode=count
 
 # linter:
 GOLINT = $(GOPATH)/bin/golangci-lint
